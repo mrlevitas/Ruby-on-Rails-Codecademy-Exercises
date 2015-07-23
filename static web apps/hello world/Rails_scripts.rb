@@ -1,9 +1,13 @@
 #!/bin/bash
 
+# You can install the rails gem by typing 
+$ gem install rails # if you don't have it already
+
 
 $ rails new MySite
 
 $ bundle install
+	# Installs the gems in the Gemfile
 	# Installs all the software packages needed by the new Rails app. 
 	# These software packages are called gems and they are listed in the file Gemfile.
 
@@ -35,6 +39,8 @@ $ rails server
 # 1) create a CONTROLLER
 $ rails generate controller Pages
 	# creates file in app/controllers/pages_controller.rb
+	# Using generators will save you a large amount of time by writing 
+	# boilerplate code, code that is necessary for the app to work.
 
 # open pages_controller.rb & modify it to:
 class PagesController < ApplicationController
@@ -47,7 +53,7 @@ end
 # 2) create a ROUTE to above controller
 
 # Open config/routes.rb & add:
-get 'welcome' => 'pages#home
+get 'welcome' => 'pages#home'
 	# will tell Rails to send this request to the Pages controller's home action
 
 #-------------------------------------------------------------------------------

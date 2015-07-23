@@ -1,0 +1,31 @@
+<!-- threadly/app/views/posts/index.html.erb -->
+
+    <div class="header">
+      <div class="container">
+        <h1>threadly</h1>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        
+        <!-- Form goes here -->
+        <%= form_for(@new_post) do |f| %>  
+  <div class="field"> 
+    <%= f.label :post %><br> 
+    <%= f.text_area :comment %> 
+  </div> 
+  <div class="actions"> 
+    <%= f.submit "Create" %> 
+  </div> 
+ <% end %>
+        
+    <ul class="comments">
+  <% @all_posts.each do |p| %>
+  <li><%= p.comment %></li>
+  <% end %>
+		</ul>
+        
+
+      </div>
+    </div>
